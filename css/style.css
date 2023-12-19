@@ -1,6 +1,15 @@
 body {
     background-color: hsl(0, 0%, 0%);
-    margin: 0px;
+}
+
+body {
+    display: grid;
+    grid-template-rows: 1fr auto 0.15fr;
+    padding-top: 1rem;
+}
+
+h1 {
+    margin: 0;
 }
 
 
@@ -8,6 +17,7 @@ body {
     font-size: 100pt;
     text-align: center;
     font-family: "Bebas Neue";
+    margin-top: 0;
     color: hsl(173, 100%, 78%);
 }
 
@@ -46,24 +56,12 @@ img {
 }
 
 footer {
-    position: fixed;
-    bottom: 0;
-    padding: 2em;
+    padding: 20px;
     background-color: hsl(210, 69%, 14%);
     color: hsl(320, 100%, 92%);
     font-family: 'Montserrat';
-    font-size: 48pt;
-}
-
-
-@media screen and (max-width: 499px) {
-    .header {
-        font-size: 24pt;
-    }
-
-    .grid-container {
-        margin: 1em;
-    }
+    text-align: center;
+    font-size: 18px;
 }
 
 @media screen and (max-width: 1279px) {
@@ -73,11 +71,24 @@ footer {
 
     .grid-container {
         display: grid;
-        grid-template-columns: repeat(1fr, 1fr, 1fr);
+        grid-template-columns: 1fr 1fr;
         grid-gap: 20px;
     }
 
     .grid-container {
         margin: 1em;
     }
+}
+
+@media screen and (max-width: 499px) {
+    .header {
+        font-size: 24pt;
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr;
+        margin: 1em;
+    }
+
+
 }
